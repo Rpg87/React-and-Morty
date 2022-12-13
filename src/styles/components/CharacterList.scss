@@ -1,0 +1,16 @@
+@import '../core/Mixins.scss';
+@import '../core/Variables.scss';
+.charList {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 45px;
+    text-decoration: none;
+        &__card {
+            list-style: none;
+            background-color: $color-card;
+    }
+        &__link {
+            @include link;
+        }
+}

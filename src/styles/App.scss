@@ -1,9 +1,11 @@
 @import 'core/Reset';
+@import 'core/Mixins.scss';
 
 
 .body {
   margin: 0;
 }
+
 .App {
   background-color: black;
 }

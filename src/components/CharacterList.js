@@ -1,3 +1,4 @@
+import '../styles/components/CharacterList.scss';
 import CharacterListCard from './CharacterListCard';
 
 const CharacterList = ({ charactersData }) => {
@@ -6,7 +7,7 @@ const CharacterList = ({ charactersData }) => {
     });
     return (
         <section>
-            <ul>{AllChars}</ul>
+            <ul className='charList'>{AllChars}</ul>
         </section>
     )
 }
