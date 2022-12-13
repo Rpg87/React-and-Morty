@@ -1,8 +1,8 @@
 import CharacterListCard from './CharacterListCard';
 
-const CharacterList = ({ user }) => {
-    const AllChars = user.map((eachChar) => {
-        return <CharacterListCard eachChar={eachChar} />;
+const CharacterList = ({ charactersData }) => {
+    const AllChars = charactersData.map((eachChar) => {
+        return <CharacterListCard key={eachChar.id} eachChar={eachChar} />;
     });
     return (
         <section>
