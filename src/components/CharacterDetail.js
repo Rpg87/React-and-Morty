@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 const CharacterDetail = (props) => {
@@ -16,6 +17,7 @@ const CharacterDetail = (props) => {
                 <h3> Origin: {charFound.origin} </h3>
                 <h3> Episodes: {charFound.episode}</h3>
             </article>
+            <Link to='/'>Volver</Link>
         </li>
     )
 };
