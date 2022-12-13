@@ -1,0 +1,9 @@
+.header {
+display: flex;
+justify-content: center;
+background-color: black;
+&__img {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+}

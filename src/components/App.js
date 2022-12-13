@@ -1,12 +1,13 @@
 import '../styles/App.scss';
 import { useEffect, useState } from 'react';
-import logo from '../images/logo_compr.png';
+
 import callToApi from '../service/Api.js'
 import CharacterList from './CharacterList.js';
 import FiltersName from './FiltersName.js';
 import Filters from './Filters';
 import CharacterDetail from './CharacterDetail';
 import { Routes, Route, Link } from 'react-router-dom';
+import Header from './Header.js';
 
 
 
@@ -42,7 +43,8 @@ function App() {
 
   return (
     <div className="App">
-      <header> <img src={logo} alt="Rick and Morty" /></header>
+      <Header />
+
 
       <Routes>
         <Route path='/' element={

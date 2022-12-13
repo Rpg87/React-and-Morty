@@ -1,5 +1,9 @@
-@import 'core/reset';
+@import 'core/Reset';
 
-/*
-  Aquí puedes poner tu código Sass
-*/
+
+.body {
+  margin: 0;
+}
+.App {
+  background-color: black;
+}
