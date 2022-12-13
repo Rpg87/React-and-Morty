@@ -8,6 +8,10 @@ const callToApi = () => {
                     image: user.image,
                     name: user.name,
                     species: user.species,
+                    origin: user.origin.name,
+                    episode: user.episode.length,
+                    status: user.status,
+
 
                 };
             });
