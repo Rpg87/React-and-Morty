@@ -1,0 +1,92 @@
+@import "../core/Variables.scss";
+@import "../core/Mixins.scss";
+@import "../core/Responsive.scss";
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.link {
+    box-shadow: -5px -5px 30px 5px #03b0c8, 5px 5px 30px 5px #8fdd7f;
+    font-size: 40px;
+    color: whitesmoke;
+    padding-left: 20px;
+    padding-right: 20px;
+    @include link;
+    @include mobile {
+        font-size: 20px;
+    }
+}
+
+.detail {
+    display: flex;
+    margin-bottom: 0;
+    text-decoration: none;
+    justify-content: center;
+    padding-left: 0;
+
+    &__card {
+        list-style: none;
+        background-color: $color-card;
+        text-align: center;
+    }
+    &__img {
+        @include mobile {
+            width: 250px;
+        }
+    }
+    &__name {
+        color: $color-detailRest;
+        font-size: 30px;
+        @include mobile {
+            font-size: 20px;
+        }
+    }
+    &__rest {
+        text-decoration: none;
+        color: $color-letter;
+        @include mobile {
+            font-size: 15px;
+        }
+        &--extra {
+            text-decoration: underline;
+            margin-right: 5px;
+            color: $color-detailRest;
+            @include mobile {
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+.alien {
+    font-size: 30px;
+    margin-left: 10px;
+    @include mobile {
+        font-size: 25px;
+    }
+}
+.human {
+    margin-left: 10px;
+    font-size: 30px;
+    @include mobile {
+        font-size: 25px;
+    }
+}
+
+.alive {
+    margin-left: 10px;
+    font-size: 30px;
+    @include mobile {
+        font-size: 25px;
+    }
+}
+.skull {
+    margin-left: 10px;
+    font-size: 35px;
+    @include mobile {
+        font-size: 25px;
+    }
+}

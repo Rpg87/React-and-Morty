@@ -1,15 +1,19 @@
+import "../styles/components/Filters.scss";
 import FiltersName from "./FiltersName";
 
-
 const Filters = (props) => {
-
-    const handleSubmit = (e) => { e.preventDefault() }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    };
 
     return (
-        <form action="" onSubmit={handleSubmit}>
-            <FiltersName handleFilter={props.handleFilter} filtersName={props.filtersName} />
+        <form className="form" action="" onSubmit={handleSubmit}>
+            <FiltersName
+                handleFilter={props.handleFilter}
+                filtersName={props.filtersName}
+            />
         </form>
-    )
-}
+    );
+};
 
 export default Filters;

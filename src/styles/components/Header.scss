@@ -1,9 +1,14 @@
+@import "../core/Responsive.scss";
+
 .header {
-display: flex;
-justify-content: center;
-background-color: black;
-&__img {
-    margin-top: 10px;
-    margin-bottom: 15px;
-}
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    &__img {
+        margin-top: 10px;
+        margin-bottom: 15px;
+        @include mobile {
+            width: 350px;
+        }
+    }
 }

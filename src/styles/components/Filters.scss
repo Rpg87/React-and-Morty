@@ -1,0 +1,24 @@
+@import "../core/Responsive.scss";
+.form {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    @include mobile {
+    }
+    &__label {
+        margin-right: 20px;
+        font-size: 25px;
+        letter-spacing: 2px;
+        @include mobile {
+            display: none;
+        }
+    }
+    &__input {
+        font-size: 25px;
+        @include mobile {
+            font-size: 15px;
+        }
+    }
+}
