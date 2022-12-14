@@ -1,4 +1,16 @@
-# Getting Started with Create React App
+# Raquel Peña evaluación final módulo 3.
+
+## React
+
+## **Bienvenidx a mi web y gracias anticipadas**
+
+## ¿De qué va?
+
+¿Conoces la increible serie de Rick and Morty? [Saber más](https://www.filmaffinity.com/es/film551351.html)
+
+Como tarea nos han dado la increible misión de usando una [Api](https://rickandmortyapi.com/api/character) poder **filtrar los personajes por su nombre** y si te apetece info más detallada, también **puedes pulsar sobre cualquier personaje** y verás cosas interesantes.
+
+Como detalle curioso, si eres un humano curioso y aventurero como nuestros protagonistas y te pierdes buscando personajes no disponibles, no te preocupes, te ayudaremos a volver a casa. ¡Te reto a perderte! ¿Qué tal si buscas el personaje 88?
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
