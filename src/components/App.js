@@ -13,6 +13,7 @@ import PageNotFound from "./PageNotFound";
 function App() {
   const [charactersData, setCharactersData] = useState([]);
   const [filtersName, setFiltersName] = useState("");
+  const [filterType, setFilterType] = useState("");
 
   // USEEFFECT
   useEffect(() => {
@@ -30,8 +31,16 @@ function App() {
     setFiltersName(value);
   };
 
+  const handleType = (value) => {
+    setFilterType(value);
+  }
+
   const filteredNames = charactersData.filter((filter) =>
     filter.name.toLocaleLowerCase().includes(filtersName.toLowerCase())
+  );
+
+  const filteredType = charactersData.filter((filter) =>
+    filter.type.toLocaleLowerCase().includes(filtersType.toLowerCase())
   );
 
   return (
@@ -43,8 +52,8 @@ function App() {
           path="/"
           element={
             <main className="main">
-              <Filters handleFilter={handleFilter} filtersName={filtersName} />
-              <CharacterList charactersData={filteredNames}></CharacterList>
+              <Filters handleFilter={handleFilter} filtersName={filtersName} handleType={handleType} filterType={filterType} />
+              <CharacterList charactersData={filteredNames} filteredType={filteredType}></CharacterList>
             </main>
           }
         />
