@@ -1,75 +1,16 @@
-@import "../core/Mixins.scss";
-@import "../core/Variables.scss";
-@import "../core/Responsive.scss";
-
+@import '../core/Mixins.scss';
+@import '../core/Variables.scss';
 .charList {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 45px;
     text-decoration: none;
-    padding-left: 0;
-    margin-bottom: 0;
-    padding-bottom: 25px;
-    @include mobile {
-        justify-content: center;
+        &__card {
+            list-style: none;
+            background-color: $color-card;
     }
-    &__card {
-        list-style: none;
-        background-color: $color-card;
-        text-align: center;
-        @include mobile {
-            width: 35%;
+        &__link {
+            @include link;
         }
-    }
-    &__link {
-        @include link;
-        &--img {
-            object-fit: cover;
-            @include mobile {
-                width: 100%;
-            }
-        }
-        &--detail {
-            text-decoration: none;
-            color: $color-letter;
-            @include mobile {
-                font-size: 15px;
-            }
-        }
-    }
-}
-
-.message {
-    display: flex;
-    &__img {
-        width: 500px;
-        height: 600px;
-        @include mobile {
-            width: 250px;
-            height: 300px;
-        }
-    }
-}
-.messageError {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    &__h3 {
-        font-size: 50px;
-        text-align: center;
-        @include mobile {
-            font-size: 20px;
-        }
-    }
-    &__text {
-        font-size: 30px;
-        margin-left: 40px;
-        text-align: center;
-
-        @include mobile {
-            font-size: 20px;
-            margin-left: 15px;
-        }
-    }
 }

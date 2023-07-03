@@ -1,21 +1,23 @@
-import "../styles/App.scss";
-import { useEffect, useState } from "react";
+import '../styles/App.scss';
+import { useEffect, useState } from 'react';
 
-import callToApi from "../service/Api.js";
-import CharacterList from "./CharacterList.js";
+import callToApi from '../service/Api.js'
+import CharacterList from './CharacterList.js';
+import FiltersName from './FiltersName.js';
+import Filters from './Filters';
+import CharacterDetail from './CharacterDetail';
+import { Routes, Route, Link } from 'react-router-dom';
+import Header from './Header.js';
 
-import Filters from "./Filters";
-import CharacterDetail from "./CharacterDetail";
-import { Routes, Route } from "react-router-dom";
-import Header from "./Header.js";
-import PageNotFound from "./PageNotFound";
+
+
 
 function App() {
+  // VARIABLES ESTADO
   const [charactersData, setCharactersData] = useState([]);
-  const [filtersName, setFiltersName] = useState("");
-  const [filterType, setFilterType] = useState("");
+  const [filtersName, setFiltersName] = useState('');
 
-  // USEEFFECT
+  // USEEFFECT 
   useEffect(() => {
     callToApi().then((cleanChar) => {
       setCharactersData(cleanChar);
@@ -25,44 +27,39 @@ function App() {
   //FUNCIONES PARA ROUTER
   const findCharDetail = (id) => {
     return charactersData.find((oneChar) => oneChar.id === parseInt(id));
-  };
+  }
 
+
+  // FUNCIONES HANDLER
   const handleFilter = (value) => {
     setFiltersName(value);
   };
 
-  const handleType = (value) => {
-    setFilterType(value);
-  }
+  // FUNCIONES Y VARIABLES QUE AYUDEN A RENDERIZAR HTML
 
-  const filteredNames = charactersData.filter((filter) =>
-    filter.name.toLocaleLowerCase().includes(filtersName.toLowerCase())
-  );
+  const filteredNames = charactersData.filter((filter) => filter.name.toLocaleLowerCase().includes(filtersName.toLowerCase()));
 
-  const filteredType = charactersData.filter((filter) =>
-    filter.type.toLocaleLowerCase().includes(filtersType.toLowerCase())
-  );
+  // HTML EN EL RETURN
 
   return (
     <div className="App">
       <Header />
 
+
       <Routes>
-        <Route
-          path="/"
-          element={
-            <main className="main">
-              <Filters handleFilter={handleFilter} filtersName={filtersName} handleType={handleType} filterType={filterType} />
-              <CharacterList charactersData={filteredNames} filteredType={filteredType}></CharacterList>
-            </main>
-          }
+        <Route path='/' element={
+          <main>
+            <Filters handleFilter={handleFilter} filtersName={filtersName} />
+            <CharacterList charactersData={filteredNames}  ></CharacterList>
+          </main>
+        }
         />
-        <Route
-          path="/CharacterDetail/:id"
-          element={<CharacterDetail findCharDetail={findCharDetail} />}
+        <Route path='/CharacterDetail/:id' element={<CharacterDetail findCharDetail={findCharDetail} />}
+
         />
-        <Route path="/PageNotFound" element={<PageNotFound />} />
       </Routes>
+
+      {/* Aquí va tu código HTML. */}
     </div>
   );
 }

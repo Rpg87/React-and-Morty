@@ -1,13 +1,11 @@
 @import 'core/Reset';
 @import 'core/Mixins.scss';
-@import 'core/Responsive.scss';
 
 
 .body {
   margin: 0;
-  background-color: black;
 }
-.main {
-  margin-left: 20px;
-  margin-right: 20px;
+
+.App {
+  background-color: black;
 }
