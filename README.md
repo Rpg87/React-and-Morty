@@ -19,7 +19,7 @@ Este proyecto se ha creado usando [Create React App](https://github.com/facebook
 Puedes hacer lo siguiente usando la terminal de Visual Studio (sí, lo necesitas) y previo seleccionar la carpeta donde quieras ubicarlo:
 
 ```
-git clone https://github.com/Adalab/modulo-3-evaluacion-final-Rpg87.git
+git clone https://github.com/Rpg87/React-and-Morty.git
 npm install
 npm install react-icons --save
 npm start
